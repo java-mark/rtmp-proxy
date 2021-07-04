@@ -10,6 +10,11 @@ repositories {
 }
 
 dependencies {
+    /**
+     * TODO: simply this implementation which make project to bigger
+     */
+    implementation 'io.netty:netty-all:4.1.30.Final'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
