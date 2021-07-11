@@ -13,8 +13,13 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  */
 public class SimpleServer {
     public static class HandlerChannel extends ChannelInboundHandlerAdapter {
+        boolean state = false;
+
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+            System.out.println("status=" + state);
+
+
             ByteBuf in = (ByteBuf) msg;
             System.out.println(in.toString(io.netty.util.CharsetUtil.US_ASCII));
 
